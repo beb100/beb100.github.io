@@ -96,6 +96,44 @@
         ul li {
             margin-bottom: 10px;
         }
+
+        /* Form styling */
+        #apply-form {
+            margin-top: 40px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #001f3f;
+        }
+
+        #apply-form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #001f3f;
+        }
+
+        #apply-form button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #001f3f;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #apply-form button:hover {
+            background-color: #003366;
+        }
+
+        #formMessage {
+            margin-top: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -152,57 +190,48 @@
 
             <p>For more details on what to expect at the Academy, visit the official <a href="https://patrooper.com/what-to-expect.html" target="_blank">Pennsylvania State Police What to Expect page</a>.</p>
         </section>
-            <!-- Add this just before the closing </main> tag -->
-    <section id="apply-form">
-        <h2>Request More Info / Apply</h2>
-        <form id="infoForm">
-            <!-- Text input -->
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Your full name"><br><br>
 
-            <!-- Checkbox input -->
-            <label>Areas of Interest:</label><br>
-            <input type="checkbox" id="salary" name="interest" value="Salary Info">
-            <label for="salary">Salary Info</label><br>
-            <input type="checkbox" id="benefits" name="interest" value="Benefits Info">
-            <label for="benefits">Benefits Info</label><br>
-            <input type="checkbox" id="academy" name="interest" value="Academy Life Info">
-            <label for="academy">Academy Life Info</label><br><br>
+        <!-- Apply Form Section -->
+        <section id="apply-form">
+            <h2>Request More Info / Apply</h2>
+            <form id="infoForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your full name"><br>
 
-            <!-- Radio buttons -->
-            <label>Preferred Contact Method:</label><br>
-            <input type="radio" id="contactEmail" name="contactMethod" value="Email">
-            <label for="contactEmail">Email</label><br>
-            <input type="radio" id="contactPhone" name="contactMethod" value="Phone">
-            <label for="contactPhone">Phone</label><br><br>
+                <label>Areas of Interest:</label><br>
+                <input type="checkbox" id="salary" name="interest" value="Salary Info">
+                <label for="salary">Salary Info</label><br>
+                <input type="checkbox" id="benefits" name="interest" value="Benefits Info">
+                <label for="benefits">Benefits Info</label><br>
+                <input type="checkbox" id="academy" name="interest" value="Academy Life Info">
+                <label for="academy">Academy Life Info</label><br><br>
 
-            <!-- Buttons -->
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </form>
+                <label>Preferred Contact Method:</label><br>
+                <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+                <label for="contactEmail">Email</label><br>
+                <input type="radio" id="contactPhone" name="contactMethod" value="Phone">
+                <label for="contactPhone">Phone</label><br><br>
 
-        <!-- Div for JS message -->
-        <div id="formMessage" style="margin-top:20px; font-weight:bold;"></div>
-    </section>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
 
+            <div id="formMessage"></div>
+        </section>
+    </main>
+
+    <!-- JavaScript for form validation and messages -->
     <script>
-        // Function to greet user by name
         function greetUser(name) {
             return "Thank you, " + name + ", for your interest!";
         }
 
-        // Function to check if at least one checkbox is selected
         function validateCheckboxes() {
-            const checkboxes = document.querySelectorAll('input[name="interest"]:checked');
-            if (checkboxes.length === 0) {
-                return false;
-            }
-            return true;
+            return document.querySelectorAll('input[name="interest"]:checked').length > 0;
         }
 
-        // Function to validate form and display message
         function handleSubmit(event) {
-            event.preventDefault(); // prevent default form submission
+            event.preventDefault();
             const name = document.getElementById("name").value;
             const contactMethod = document.querySelector('input[name="contactMethod"]:checked');
             let message = "";
@@ -220,15 +249,11 @@
             document.getElementById("formMessage").innerHTML = message;
         }
 
-        // Add event listener to form
         document.getElementById("infoForm").addEventListener("submit", handleSubmit);
-
-        // Optional: clear message on reset
         document.getElementById("infoForm").addEventListener("reset", function() {
             document.getElementById("formMessage").innerHTML = "";
         });
     </script>
-    </main>
 
 </body>
 </html>
