@@ -75,9 +75,15 @@
         }
 
         /* Image styling */
-        .training-image {
-            display: block;
-            margin: 20px auto;
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* space between images */
+            margin: 20px 0;
+        }
+
+        .images-container img {
             max-width: 300px;
             border: 3px solid #001f3f; /* navy border */
             border-radius: 10px;
@@ -108,8 +114,11 @@
     </header>
 
     <main>
-        <!-- Academy Training Image -->
-        <img src="training1.png" alt="PSP Academy Training" class="training-image">
+        <!-- Academy Training Images Side by Side -->
+        <div class="images-container">
+            <img src="training1.png" alt="PSP Academy Training">
+            <img src="academycenter1.png" alt="PSP Academy Center">
+        </div>
 
         <section id="academy-overview">
             <h2>Life at the Pennsylvania State Police Academy</h2>
