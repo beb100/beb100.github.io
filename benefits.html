@@ -5,71 +5,113 @@
 </nav>
 <hr>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cadet Salary & Benefits - Pennsylvania State Police</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennsylvania State Police - Starting Salary</title>
+    <style>
+        /* Colors: light gray, dark gray, black, navy blue */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* light gray */
+            color: #000000; /* black */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #001f3f; /* navy blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #d3d3d3; /* dark gray */
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            color: #001f3f; /* navy blue */
+        }
+
+        h3 {
+            color: #000000; /* black */
+        }
+
+        .salary {
+            background-color: #f8f8f8; /* light gray section for emphasis */
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .more-details {
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            color: #001f3f; /* navy blue links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Pennsylvania State Police</h1>
+        <h2>Starting Trooper Information</h2>
+    </header>
 
-<!-- Navigation -->
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="salary.html">Cadet Salary & Benefits</a> |
-    <a href="academy.html">Academy Life</a>
-</nav>
-<hr>
+    <main>
+        <div class="salary">
+            <h3>Starting Trooper Salary:</h3>
+            <p>$71,647</p>
 
-<h1>Cadet Salary & Benefits</h1>
-<p>
-    The Pennsylvania State Police offer competitive pay and strong benefits for cadets and newly appointed troopers.
-    Below is a breakdown of salary, time off, health coverage, and additional incentives.
-</p>
+            <h3>Salary after first five years:</h3>
+            <p>$95,557</p>
 
-<!-- Table Requirement -->
-<h2>Salary Overview</h2>
-<table border="1" cellpadding="10">
-    <tr>
-        <th>Category</th>
-        <th>Details</th>
-    </tr>
-    <tr>
-        <td>Cadet Salary</td>
-        <td>$1,500–$1,600 bi-weekly</td>
-    </tr>
-    <tr>
-        <td>Trooper Starting Salary</td>
-        <td>$66,000–$70,000 per year</td>
-    </tr>
-    <tr>
-        <td>Health Insurance</td>
-        <td>Medical, dental, and vision included</td>
-    </tr>
-    <tr>
-        <td>Retirement</td>
-        <td>State pension and deferred compensation options</td>
-    </tr>
-    <tr>
-        <td>Paid Time Off</td>
-        <td>Vacation, holidays, sick days</td>
-    </tr>
-</table>
+            <a href="#more-details" class="more-details">More Details</a>
+        </div>
 
-<!-- List Requirement -->
-<h2>Cadet Requirements</h2>
-<ul>
-    <li>Must be at least 20 years old at application</li>
-    <li>High school diploma or GED</li>
-    <li>U.S. citizen</li>
-    <li>Valid driver’s license</li>
-    <li>Must pass written, physical, medical, and background checks</li>
-</ul>
+        <section id="more-details">
+            <h2>Cadet Benefits and Details</h2>
+            <p>Cadets, upon appointment, are required to join the State Employees’ Retirement System (SERS). Cadets contribute 6.25% of their gross salary to SERS. The Commonwealth is required to make a State-share contribution, with the percentage rate set by SERS.</p>
 
-<!-- Images Section (you can upload images & change filenames) -->
-<h2>Images</h2>
-<img src="cadet1.jpg" width="300">
-<img src="cadet2.jpg" width="300">
+            <p>Cadets are eligible for State-paid group life insurance equivalent to their annual salary after 90 days of employment. Upon promotion to Trooper, the maximum insurance payment is $50,000. Upon graduation pay increases to $71,647.</p>
 
+            <p>Cadets are eligible to enroll in medical/hospital coverage only. A payroll deduction of 2.75% of biweekly gross salary is charged for single enrollment in the least expensive plan in the Cadet’s county of residence. Cadets may elect to enroll in a more expensive medical plan with an additional payroll deduction for plan buy-up. Cadets may also elect to cover eligible family members by paying the cost for a family plan via payroll deduction.</p>
+
+            <p><strong>Note:</strong> Current Commonwealth employees will not continue to receive supplemental benefits (prescription, dental, vision) as they are canceled upon appointment as a State Police Cadet.</p>
+
+            <p>Upon promotion to the rank of Trooper, members and their dependents are eligible for additional benefits, i.e., Dental Care Program, Vision Care Plan, and Prescription Drug Program. The Commonwealth pays the entire cost of all coverage for the Trooper and their eligible family members.</p>
+
+            <p>Cadets are not eligible for overtime compensation or shift differential while training at the Academy.</p>
+        </section>
+        #apply-now {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#apply-now img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+    </main>
 </body>
 </html>
+
+
